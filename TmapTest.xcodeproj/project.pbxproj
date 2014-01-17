@@ -26,7 +26,7 @@
 		00B525511888C32000E106B7 /* desktop.ini in Resources */ = {isa = PBXBuildFile; fileRef = 00B525411888C32000E106B7 /* desktop.ini */; };
 		00B525521888C32000E106B7 /* HeadingAngleSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B525421888C32000E106B7 /* HeadingAngleSmall.png */; };
 		00B525531888C32000E106B7 /* HeadingAngleSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B525431888C32000E106B7 /* HeadingAngleSmall@2x.png */; };
-		00B525541888C32000E106B7 /* icon_clustering.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B525441888C32000E106B7 /* icon_clustering.png */; };
+		00B525541888C32000E106B7 /* t_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B525441888C32000E106B7 /* t_logo.png */; };
 		00B525551888C32000E106B7 /* icon_clustering@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B525451888C32000E106B7 /* icon_clustering@2x.png */; };
 		00B525561888C32000E106B7 /* mapbg_tlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B525461888C32000E106B7 /* mapbg_tlogo.png */; };
 		00B525571888C32000E106B7 /* mapbg_tlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B525471888C32000E106B7 /* mapbg_tlogo@2x.png */; };
@@ -39,6 +39,7 @@
 		00B5255E1888C32000E106B7 /* libskpMap_OP-iOS7.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B5254E1888C32000E106B7 /* libskpMap_OP-iOS7.0.a */; };
 		00B525601888C32F00E106B7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B5255F1888C32F00E106B7 /* QuartzCore.framework */; };
 		00B525621888C34300E106B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B525611888C34300E106B7 /* CoreLocation.framework */; };
+		00B525A61888E08C00E106B7 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B525A51888E08C00E106B7 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +97,7 @@
 		00B525411888C32000E106B7 /* desktop.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = desktop.ini; sourceTree = "<group>"; };
 		00B525421888C32000E106B7 /* HeadingAngleSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeadingAngleSmall.png; sourceTree = "<group>"; };
 		00B525431888C32000E106B7 /* HeadingAngleSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HeadingAngleSmall@2x.png"; sourceTree = "<group>"; };
-		00B525441888C32000E106B7 /* icon_clustering.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_clustering.png; sourceTree = "<group>"; };
+		00B525441888C32000E106B7 /* t_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_logo.png; sourceTree = "<group>"; };
 		00B525451888C32000E106B7 /* icon_clustering@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_clustering@2x.png"; sourceTree = "<group>"; };
 		00B525461888C32000E106B7 /* mapbg_tlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapbg_tlogo.png; sourceTree = "<group>"; };
 		00B525471888C32000E106B7 /* mapbg_tlogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapbg_tlogo@2x.png"; sourceTree = "<group>"; };
@@ -109,6 +110,8 @@
 		00B5254E1888C32000E106B7 /* libskpMap_OP-iOS7.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libskpMap_OP-iOS7.0.a"; sourceTree = "<group>"; };
 		00B5255F1888C32F00E106B7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		00B525611888C34300E106B7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		00B525A41888E08C00E106B7 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		00B525A51888E08C00E106B7 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,8 @@
 				00B525091888C2F200E106B7 /* ViewController.m */,
 				00B5250B1888C2F200E106B7 /* Images.xcassets */,
 				00B524FA1888C2F200E106B7 /* Supporting Files */,
+				00B525A41888E08C00E106B7 /* DetailViewController.h */,
+				00B525A51888E08C00E106B7 /* DetailViewController.m */,
 			);
 			path = TmapTest;
 			sourceTree = "<group>";
@@ -259,7 +264,7 @@
 				00B525411888C32000E106B7 /* desktop.ini */,
 				00B525421888C32000E106B7 /* HeadingAngleSmall.png */,
 				00B525431888C32000E106B7 /* HeadingAngleSmall@2x.png */,
-				00B525441888C32000E106B7 /* icon_clustering.png */,
+				00B525441888C32000E106B7 /* t_logo.png */,
 				00B525451888C32000E106B7 /* icon_clustering@2x.png */,
 				00B525461888C32000E106B7 /* mapbg_tlogo.png */,
 				00B525471888C32000E106B7 /* mapbg_tlogo@2x.png */,
@@ -349,7 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00B525541888C32000E106B7 /* icon_clustering.png in Resources */,
+				00B525541888C32000E106B7 /* t_logo.png in Resources */,
 				00B5255D1888C32000E106B7 /* TrackingDotHalo@2x.png in Resources */,
 				00B525501888C32000E106B7 /* desktop.ini in Resources */,
 				00B5255C1888C32000E106B7 /* TrackingDotHalo.png in Resources */,
@@ -388,6 +393,7 @@
 				00B5250A1888C2F200E106B7 /* ViewController.m in Sources */,
 				00B525041888C2F200E106B7 /* AppDelegate.m in Sources */,
 				00B525001888C2F200E106B7 /* main.m in Sources */,
+				00B525A61888E08C00E106B7 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,6 +25,16 @@
                                             <action selector="moveToNTower:" destination="vXZ-lx-hvc" id="wHr-Fk-0ck"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="T-Academy" id="noY-z7-Iqq">
+                                        <connections>
+                                            <action selector="addMarker:" destination="vXZ-lx-hvc" id="H9P-TE-13N"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Overlay" id="Rjg-NC-QAh">
+                                        <connections>
+                                            <action selector="addOverlay:" destination="vXZ-lx-hvc" id="6zd-Ht-7gp"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -34,6 +44,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1" y="107"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="uYK-GO-2fy">
+            <objects>
+                <viewController id="fa9-4l-0BF" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JXa-wT-o4P"/>
+                        <viewControllerLayoutGuide type="bottom" id="EPn-so-XSV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="DetailVC" id="BHT-XX-upZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6OG-Kd-gPg">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="6OG-Kd-gPg" id="klY-U7-Y32"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HyR-eK-jzX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="107"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
