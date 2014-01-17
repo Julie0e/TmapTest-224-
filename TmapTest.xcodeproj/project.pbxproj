@@ -32,7 +32,7 @@
 		00B525571888C32000E106B7 /* mapbg_tlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B525471888C32000E106B7 /* mapbg_tlogo@2x.png */; };
 		00B525581888C32000E106B7 /* poweredby.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B525481888C32000E106B7 /* poweredby.png */; };
 		00B525591888C32000E106B7 /* poweredby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B525491888C32000E106B7 /* poweredby@2x.png */; };
-		00B5255A1888C32000E106B7 /* TrackingDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B5254A1888C32000E106B7 /* TrackingDot.png */; };
+		00B5255A1888C32000E106B7 /* red_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B5254A1888C32000E106B7 /* red_pin.png */; };
 		00B5255B1888C32000E106B7 /* TrackingDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B5254B1888C32000E106B7 /* TrackingDot@2x.png */; };
 		00B5255C1888C32000E106B7 /* TrackingDotHalo.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B5254C1888C32000E106B7 /* TrackingDotHalo.png */; };
 		00B5255D1888C32000E106B7 /* TrackingDotHalo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B5254D1888C32000E106B7 /* TrackingDotHalo@2x.png */; };
@@ -103,7 +103,7 @@
 		00B525471888C32000E106B7 /* mapbg_tlogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapbg_tlogo@2x.png"; sourceTree = "<group>"; };
 		00B525481888C32000E106B7 /* poweredby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poweredby.png; sourceTree = "<group>"; };
 		00B525491888C32000E106B7 /* poweredby@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poweredby@2x.png"; sourceTree = "<group>"; };
-		00B5254A1888C32000E106B7 /* TrackingDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrackingDot.png; sourceTree = "<group>"; };
+		00B5254A1888C32000E106B7 /* red_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_pin.png; sourceTree = "<group>"; };
 		00B5254B1888C32000E106B7 /* TrackingDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TrackingDot@2x.png"; sourceTree = "<group>"; };
 		00B5254C1888C32000E106B7 /* TrackingDotHalo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrackingDotHalo.png; sourceTree = "<group>"; };
 		00B5254D1888C32000E106B7 /* TrackingDotHalo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TrackingDotHalo@2x.png"; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 				00B525471888C32000E106B7 /* mapbg_tlogo@2x.png */,
 				00B525481888C32000E106B7 /* poweredby.png */,
 				00B525491888C32000E106B7 /* poweredby@2x.png */,
-				00B5254A1888C32000E106B7 /* TrackingDot.png */,
+				00B5254A1888C32000E106B7 /* red_pin.png */,
 				00B5254B1888C32000E106B7 /* TrackingDot@2x.png */,
 				00B5254C1888C32000E106B7 /* TrackingDotHalo.png */,
 				00B5254D1888C32000E106B7 /* TrackingDotHalo@2x.png */,
@@ -366,7 +366,7 @@
 				00B524FE1888C2F200E106B7 /* InfoPlist.strings in Resources */,
 				00B525561888C32000E106B7 /* mapbg_tlogo.png in Resources */,
 				00B5255B1888C32000E106B7 /* TrackingDot@2x.png in Resources */,
-				00B5255A1888C32000E106B7 /* TrackingDot.png in Resources */,
+				00B5255A1888C32000E106B7 /* red_pin.png in Resources */,
 				00B525531888C32000E106B7 /* HeadingAngleSmall@2x.png in Resources */,
 				00B525591888C32000E106B7 /* poweredby@2x.png in Resources */,
 				00B525581888C32000E106B7 /* poweredby.png in Resources */,

@@ -11,7 +11,7 @@
 #import "DetailViewController.h"
 
 #define APP_KEY @"cc2d4ba7-e770-3d07-b088-7f54326a4405"
-#define TOOLBAR_HIGHT 44
+#define TOOLBAR_HIGHT 110
 
 
 @interface ViewController () <TMapViewDelegate>
@@ -22,6 +22,33 @@
 @implementation ViewController
 
 #pragma mark T-MAP DELEGATE
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+    [self.mapView clearCustomObjects];
+    
+    NSString *keyword = searchBar.text;
+    TMapPathData *path = [[TMapPathData alloc] init];
+    NSArray *result = [path requestFindAddressPOI:keyword];
+    NSLog(@"Number of POI : %d", result.count);
+    
+    int i = 0;
+    for (TMapPOIItem *item in result)
+    {
+        NSLog(@"Name : %@ - Point : %@", [item getPOIName], [item getPOIPoint]);
+        NSString *markerID = [NSString stringWithFormat:@"marker_%d", i++];
+        TMapMarkerItem *marker = [[TMapMarkerItem alloc] init];
+        [marker setTMapPoint:[item getPOIPoint]];
+        [marker setIcon:[UIImage imageNamed:@"red_pin.png"]];
+        
+        [marker setCanShowCallout:YES];
+        [marker setCalloutTitle:[item getPOIName]];
+        [marker setCalloutSubtitle:[item getPOIAddress]];
+        
+        [self.mapView addCustomObject:marker ID:markerID];
+    }
+}
 
 - (void)onClick:(TMapPoint *)point
 {
