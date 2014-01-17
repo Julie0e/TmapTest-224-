@@ -14,17 +14,41 @@
 #define TOOLBAR_HIGHT 140
 
 
-@interface ViewController () <TMapViewDelegate>
+@interface ViewController () <TMapViewDelegate, TMapGpsManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *transportType;
 @property (strong, nonatomic) TMapView *mapView;
 @property (strong, nonatomic) TMapMarkerItem *startMarker, *endMarker;
+@property (strong, nonatomic) TMapGpsManager *gpsManager;
+
 
 @end
 
 @implementation ViewController
 
 #pragma mark T-MAP DELEGATE
+#pragma mark GPS Manaer's Delegate
+
+- (void)locationChanged:(TMapPoint *)newTmp
+{
+    NSLog(@"Location Changed : %@", newTmp);
+    [self.mapView setCenterPoint:newTmp];
+}
+
+- (void)headingChanged:(double)heading
+{
+    
+}
+- (IBAction)switchGPS:(id)sender {
+    UISwitch * _switch = (UISwitch *)sender;
+    
+    if (_switch.on == YES) {
+        [self.gpsManager openGps];
+    }
+    else{
+        [self.gpsManager closeGps];
+    }
+}
 
 - (IBAction)transportTypeChanged:(id)sender
 {
@@ -159,6 +183,9 @@
     //self.mapView.zoomLevel = 12.0;
     
     self.mapView.delegate = self;
+    
+    self.gpsManager = [[TMapGpsManager alloc] init];
+    [self.gpsManager setDelegate:self];
     
     
     self.startMarker = [[TMapMarkerItem alloc] init];
