@@ -11,17 +11,44 @@
 #import "DetailViewController.h"
 
 #define APP_KEY @"cc2d4ba7-e770-3d07-b088-7f54326a4405"
-#define TOOLBAR_HIGHT 110
+#define TOOLBAR_HIGHT 140
 
 
 @interface ViewController () <TMapViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *transportType;
 @property (strong, nonatomic) TMapView *mapView;
+@property (strong, nonatomic) TMapMarkerItem *startMarker, *endMarker;
+
 @end
 
 @implementation ViewController
 
 #pragma mark T-MAP DELEGATE
+
+- (IBAction)transportTypeChanged:(id)sender
+{
+    [self showPath];
+}
+
+- (void)showPath
+{
+    TMapPathData *path = [[TMapPathData alloc] init];
+    
+    TMapPolyLine *line = [path findPathDataWithType:self.transportType.selectedSegmentIndex startPoint:[self.startMarker getTMapPoint] endPoint:[self.endMarker getTMapPoint]];
+    
+    if (line != nil) {
+        [self.mapView showFullPath:@[line]];
+        
+        [self.mapView bringMarkerToFront:self.startMarker];
+        [self.mapView bringMarkerToFront:self.endMarker];
+    }
+}
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self showPath];
+}
+
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
@@ -31,7 +58,7 @@
     NSString *keyword = searchBar.text;
     TMapPathData *path = [[TMapPathData alloc] init];
     NSArray *result = [path requestFindAddressPOI:keyword];
-    NSLog(@"Number of POI : %d", result.count);
+    NSLog(@"Number of POI : %d", (int)result.count);
     
     int i = 0;
     for (TMapPOIItem *item in result)
@@ -123,14 +150,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	CGRect rect = CGRectMake(0, TOOLBAR_HIGHT, self.view.frame.size.width, self.view.frame.size.height - TOOLBAR_HIGHT);
     
     self.mapView =[[TMapView alloc]initWithFrame:rect];
     [self.mapView setSKPMapApiKey:APP_KEY];
-    self.mapView.zoomLevel = 12.0;
+    [self.view addSubview:self.mapView];
+    //self.mapView.zoomLevel = 12.0;
     
     self.mapView.delegate = self;
-    [self.view addSubview:self.mapView];
+    
+    
+    self.startMarker = [[TMapMarkerItem alloc] init];
+    [self.startMarker setIcon:[UIImage imageNamed:@"red_pin.png"]];
+    TMapPoint *startPoint = [self.mapView convertPointToGpsX:50 andY:50];
+    [self.startMarker setTMapPoint:startPoint];
+    [self.mapView addCustomObject:self.startMarker ID:@"START"];
+    
+    self.endMarker = [[TMapMarkerItem alloc] init];
+    [self.endMarker setIcon:[UIImage imageNamed:@"red_pin.png"]];
+    TMapPoint *endPoint = [self.mapView convertPointToGpsX:300 andY:300];
+    [self.endMarker setTMapPoint:endPoint];
+    [self.mapView addCustomObject:self.endMarker ID:@"END"];
     
 
 }

@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="남산" id="b4Z-FH-MzY">
+                                    <barButtonItem title="서울" id="b4Z-FH-MzY">
                                         <connections>
                                             <action selector="moveToNTower:" destination="vXZ-lx-hvc" id="wHr-Fk-0ck"/>
                                         </connections>
@@ -45,9 +45,24 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="nAM-4U-fZk"/>
                                 </connections>
                             </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pI7-y5-lTE">
+                                <rect key="frame" x="67" y="110" width="187" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="차"/>
+                                    <segment title="사람"/>
+                                    <segment title="자전거"/>
+                                </segments>
+                                <connections>
+                                    <action selector="transportTypeChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="PsC-uX-fJM"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="transportType" destination="pI7-y5-lTE" id="Taw-yi-E2t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
